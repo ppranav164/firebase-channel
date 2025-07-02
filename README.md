@@ -66,7 +66,7 @@ app/
 Send a notification via FCM:
 
 ```php
-$user->notify(new BadgeUpdateNotification($badge));
+$user->notify(new BadgeUpdateNotification());
 ```
 
 ---
