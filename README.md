@@ -40,15 +40,7 @@ app/
    storage/app/firebase/firebase_credentials.json
    ```
 
-3. Add the following config to `config/services.php`:
-
-   ```php
-   'firebase' => [
-       'credentials' => storage_path('app/firebase/firebase_credentials.json'),
-   ],
-   ```
-
-4. Update `.env`:
+3. Update `.env`:
 
    ```
    FIREBASE_CREDENTIALS=storage/app/firebase/firebase_credentials.json
