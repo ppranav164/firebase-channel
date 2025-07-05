@@ -30,7 +30,7 @@ app/
 
    ```bash
    git clone https://github.com/ppranav164/firebase-channel.git
-   cd your-repo-name
+   cd firebase-channel
    composer install
    ```
 
