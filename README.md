@@ -8,25 +8,6 @@ This package shows how to build a custom **Firebase Cloud Messaging (FCM)** noti
 
 ---
 
-## 📦 Requirements
-
-- Laravel 9/10/11+
-- PHP 8.1+
-- `kreait/firebase-php` ^7.16
-- Firebase Project with service account credentials
-
----
-
-## 🚀 Features
-
-- Custom FCM channel via Laravel's notification system
-- Clean `FCMChannel` class with support for `sendMulticast()`
-- Uses `FcmNotifiable` interface for structured payloads
-- Works seamlessly with Laravel's queuing and notifiables
-- FCM token lookup logic using `user_id`
-
----
-
 ## 📂 Folder Structure
 
 ```
@@ -45,20 +26,33 @@ app/
 
 ## 🛠 Setup
 
-1. Install the Firebase PHP SDK:
+1. Clone this repository and install dependencies:
+
    ```bash
-   composer require kreait/firebase-php:^7.16
+   git clone https://github.com/ppranav164/firebase-channel.git
+   cd your-repo-name
+   composer install
    ```
 
-2. Add your Firebase credentials to `config/services.php`:
+2. Add your Firebase service account credentials JSON file to:
+
+   ```
+   storage/app/firebase/firebase_credentials.json
+   ```
+
+3. Add the following config to `config/services.php`:
+
    ```php
    'firebase' => [
        'credentials' => storage_path('app/firebase/firebase_credentials.json'),
    ],
    ```
 
-3. Register the FCM channel in your `AppServiceProvider`.
+4. Update `.env`:
 
+   ```
+   FIREBASE_CREDENTIALS=storage/app/firebase/firebase_credentials.json
+   ```
 ---
 
 ## ✉️ Usage
